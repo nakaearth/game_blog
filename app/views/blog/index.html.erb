@@ -1,0 +1,18 @@
+
+  <table>
+          <tr >
+            <th >ブログ</th>
+          </tr>
+      <% @entries.each do |entry| %>
+        <tr >
+          <td >
+          <div class="blog_entry">
+          タイトル：<%= entry.title %><br>
+          <%= format_string_length(entry.sentence,20) %><br>
+          投稿日：<%= entry.created_at.strftime("%Y/%m/%d") %>
+          </div>
+          <%= link_to '詳細',  :controller =>'blog', :action => 'show',:id=>@blogger.id,:entry_id=>entry.id %>
+          </td>
+        </tr>
+      <% end %>
+  </table>

@@ -1,0 +1,23 @@
+
+<p id="notice"><%= notice %></p>
+<div class="entry_form">
+<p>
+  <b>タイトル:</b>
+  <%= @entry.title %>
+</p>
+<p>
+  <b>本文:</b>
+  <%= @entry.sentence %>
+</p>
+</div>
+<hr>
+<div class="comment_form">
+    <%=render @entry.comments.build %>
+</div>
+<hr>
+<b>コメント</b>
+<div class="comment">
+<% @entry.comments.each do |comment| %>
+  <%= comment.sentence %> by <%=comment.author %>
+<% end %>
+</div>

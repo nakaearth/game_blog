@@ -1,0 +1,30 @@
+<article>
+      <h2>記事一覧</h2>
+
+      <table class="section">
+        <tr >
+          <th class="list_menu">タイトル</th>
+          <th class="list_menu">記事</th>
+          <th class="list_menu">公開/非公開</th>
+          <th class="list_menu">投稿日付</th>
+          <th class="list_menu"></th>
+          <th class="list_menu"></th>
+          <th class="list_menu"></th>
+        </tr>
+
+      <% @entries.each do |entry| %>
+        <tr >
+          <td class="entry"><%= entry.title %></td>
+          <td class="entry"><%= format_string_length(entry.sentence,20) %></td>
+          <td class="entry"><%= is_public(entry.public_flag) %></td>
+          <td class="datetime"><%= entry.created_at.strftime("%Y/%m/%d") %></td>
+          <td ><%= link_to '詳細', entry %></td>
+          <td><%= link_to '編集', edit_entry_path(entry) %></td>
+          <td><%= link_to '削除', entry, :confirm => '削除してもいいですか?', :method => :delete %></td>
+        </tr>
+      <% end %>
+      </table>
+</article>
+
+
+

@@ -1,0 +1,16 @@
+<% if @blogger != nil  %>
+ <div >
+  <div class="login_user_info" >
+    <%=@blogger.handle_name %>さん。こんばんは！&nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to 'ブログをみる',  :controller =>'blog', :action => 'index',:id=>@blogger.id %>
+  </div>
+ </div>
+<table>
+  <tr><td class="menu_text">
+    <%= link_to '記事一欄へ',  :controller =>'entries', :action => 'index' %> &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to '新規投稿', new_entry_path %>&nbsp;&nbsp;|&nbsp;&nbsp;
+   
+  </td></tr>
+</table>
+<hr>
+<% end %>

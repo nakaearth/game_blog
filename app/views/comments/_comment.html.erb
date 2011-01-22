@@ -1,0 +1,13 @@
+<%= form_for [comment.entry, comment] do |f| %>
+  <div class="field">
+    <%= f.label :author ,'コメント投稿者名' %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :sentence ,'本文'%><br />
+    <%= f.text_area :sentence %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
