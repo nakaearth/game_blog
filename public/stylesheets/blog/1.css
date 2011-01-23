@@ -15,7 +15,10 @@ header{
 }
 section {
 	width: 900px;
-	background-color: #61D060;
+	background-color: #FFCCCC;
+    border: 1px solid #333333;
+    text-align: left;
+	font-weight: bold;
 	visibility: visible;
 	z-index: 0;
     float: right;
@@ -23,16 +26,16 @@ section {
 nav {
     text-align: left;
 	font-weight: bold;
-	border: 2px solid #333333;
-	background-color: #61D060;
+	border: 1px solid #333333;
+	background-color: #FFCCCC;
 	vertical-align: text-top;
 	width: 180px;
-	height: 700px;
+	height: 600px;
     float: right ;
 }
 
 .entry {
-	background-color: #FFFFDB;
+	background-color: #FFEECC;
     border: 1px solid #333333;
 	font-size: 10pt;
 	width: 200px;
