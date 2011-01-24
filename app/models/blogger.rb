@@ -8,7 +8,8 @@ class Blogger < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   has_many :entries
   has_one :blog_setting
-  validates :name,:presence =>true
+  validates :email,:presence =>true
+  validates :password,:presence =>true
   def handle_name
     if name == ""
       email

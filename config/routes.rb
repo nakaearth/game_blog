@@ -3,7 +3,8 @@ GameBlog::Application.routes.draw do
   resources :blog, :only=>[:index,:show] do
     resources :comments, :only =>[:new, :create]
   end
-
+  match 'blog/:id/:entry_id/' => 'blog#show', :as => :show
+  match 'blog/:id/' => 'blog#index', :as => :index
   get "blogger/show"
 
   get "blogger/edit"
