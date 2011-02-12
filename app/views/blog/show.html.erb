@@ -11,13 +11,14 @@
 </p>
 </div>
 <hr>
-<div class="comment_form">
+<div class="comment_form" id="comment_form_div">
     <%=render @entry.comments.build %>
 </div>
 <hr>
 <b>コメント</b>
-<div class="comment">
+<div class="comment" id="comment_list">
 <% @entry.comments.each do |comment| %>
-  <%= comment.sentence %> by <%=comment.author %>
+<%= comment.sentence %> by <%=comment.author %><br>
+  <hr>
 <% end %>
 </div>

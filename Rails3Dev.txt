@@ -198,6 +198,15 @@ https://luna.easyjp.net/projects/memo/wiki/rails/Rails3%E3%83%81%E3%83%A5%E3%83%
 ＞views/common/_blogger_info.html.erb
 を作成。view/layouts/entries.html.erbを編集
 
+○Memcached連携について
+
+・Memcachedの設定
+http://allegiance.chi-town.com/MemCacheDManager.aspx
+
+これでローカルにMemcachedサーバを立てる
+
+
+
 ○関連ユーザについて
 
 ○モバイル画面

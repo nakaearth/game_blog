@@ -1,0 +1,2 @@
+module BlogProfilesHelper
+end

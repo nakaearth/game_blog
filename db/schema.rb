@@ -10,11 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110122010012) do
+ActiveRecord::Schema.define(:version => 20110212083329) do
 
-  create_table "blog_settings", :force => true do |t|
-    t.integer  "blogger_id"
+  create_table "blog_profiles", :force => true do |t|
+    t.string   "name"
+    t.string   "blog_name"
     t.integer  "skin_id"
+    t.integer  "blogger_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -53,13 +55,12 @@ ActiveRecord::Schema.define(:version => 20110122010012) do
   create_table "entries", :force => true do |t|
     t.string   "title"
     t.string   "sentence"
+    t.boolean  "public_flag"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "blogger_id",  :default => 0, :null => false
-    t.integer  "public_flag", :default => 0, :null => false
   end
 
-  add_index "entries", ["blogger_id", "public_flag", "updated_at"], :name => "index_entries_on_blogger_id_and_public_flag_and_updated_at"
   add_index "entries", ["blogger_id", "updated_at"], :name => "index_entries_on_blogger_id_and_updated_at"
 
 end

@@ -1,15 +1,18 @@
 GameBlog::Application.routes.draw do
+  resources :blog_profiles
+
   #get "blog/index"
   resources :blog, :only=>[:index,:show] do
     resources :comments, :only =>[:new, :create]
   end
-  match 'blog/:id/:entry_id/' => 'blog#show', :as => :show
-  match 'blog/:id/' => 'blog#index', :as => :index
-  get "blogger/show"
-
-  get "blogger/edit"
-
-  get "blogger/update"
+  match 'blog/:id/:entry_id/' => 'blog#show', :as => :blog_show
+  match 'blog/:id/' => 'blog#index', :as => :blog_index
+  resources :blog_setting, :only=>[:edit,:show,:update] do
+    
+  end
+#  get "blog_setting/show"
+#  get "blog_setting/edit"
+#  get "blog_setting/update"
 
   resources :entries ,:only =>[:index,:new,:create,:show,:update,:edit,:destroy] do
     resources :comments, :only =>[:new, :create]

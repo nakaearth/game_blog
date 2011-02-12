@@ -1,4 +1,4 @@
-<%= form_for [comment.entry, comment] do |f| %>
+<%= form_for [comment.entry, comment],:id => "comment-form",:remote => true  do |f| %>
   <div class="field">
     <%= f.label :author ,'コメント投稿者名' %><br />
     <%= f.text_field :author %>

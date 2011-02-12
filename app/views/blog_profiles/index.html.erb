@@ -1,0 +1,29 @@
+<h1>Listing blog_profiles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Blog name</th>
+    <th>Skin</th>
+    <th>Blogger</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @blog_profiles.each do |blog_profile| %>
+  <tr>
+    <td><%= blog_profile.name %></td>
+    <td><%= blog_profile.blog_name %></td>
+    <td><%= blog_profile.skin_id %></td>
+    <td><%= blog_profile.blogger_id %></td>
+    <td><%= link_to 'Show', blog_profile %></td>
+    <td><%= link_to 'Edit', edit_blog_profile_path(blog_profile) %></td>
+    <td><%= link_to 'Destroy', blog_profile, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Blog profile', new_blog_profile_path %>
