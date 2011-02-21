@@ -1,0 +1,9 @@
+<div id="selected_skin"></div>
+
+<p>
+  <b>Title:</b>
+  <%= @skin.title %>
+</p>
+
+<%= link_to 'このスキンを選択',[:select_skin, @skin],:confirm => '本当に？',:remote=>true,:method=>:put %>|
+<%= link_to '一覧へ', skins_path %>

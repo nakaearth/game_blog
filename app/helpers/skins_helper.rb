@@ -1,0 +1,2 @@
+module SkinsHelper
+end

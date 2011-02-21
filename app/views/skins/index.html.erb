@@ -1,0 +1,15 @@
+<h1>スキン一覧</h1>
+<table>
+  <tr>
+    <th>スキンタイトル</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @skins.each do |skin| %>
+  <tr>
+    <td><%= skin.title %></td>
+    <td><%= link_to 'Show', skin %></td>
+    <td><%= link_to 'Destroy', skin, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

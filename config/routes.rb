@@ -1,4 +1,8 @@
 GameBlog::Application.routes.draw do
+  resources :skins,:only=>[:index,:show] do
+    put :select_skin, :on=>:member
+  end
+
   resources :blog_profiles
 
   #get "blog/index"

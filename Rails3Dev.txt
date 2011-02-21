@@ -157,10 +157,11 @@ views/bolg/index.html.erb
 　route.rbを編集
 
 ・設定テーブルの追加
-blog_settingテーブルをbloggerテーブルと1対1で作る
-rails g model blog_setting blogger_id:integer skin_id:integer
+blog_profileテーブルをbloggerテーブルと1対1で作る。プロフィール情報の中に選択スキンのIDも持つ
+rails g　scaffold  blog_setting blogger_id:integer skin_id:integer name:string blog_name:string
 
-またblogテーブルに
+・スキンテーブル周りのクラスをscaffoldで追加
+rails g　scaffold  skin title:string
 
 ・スキン情報を幾つか登録
 　スキン選択画面の作成。

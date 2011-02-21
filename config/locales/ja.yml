@@ -185,3 +185,10 @@ ja:
 
       full_messages:
         format: "%{attribute}%{message}"
+    attributes:
+      entry:
+        title: 記事タイトル
+        sentence: 記事
+        
+  site_title: ゲームブログ
+
